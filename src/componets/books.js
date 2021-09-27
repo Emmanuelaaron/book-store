@@ -1,13 +1,11 @@
-import React from "react";
-import AddBook from "./addForm";
+import React from 'react';
+import AddBook from './addForm';
 
-const Books = () => {
-    return(
-        <>
-            <h1>My Books</h1>
-            <AddBook/>
-        </>
-    )
-}
+const Books = () => (
+  <>
+    <h1>My Books</h1>
+    <AddBook />
+  </>
+);
 
-export default Books
+export default Books;

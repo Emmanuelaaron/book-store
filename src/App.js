@@ -7,6 +7,7 @@ import {
 import { Provider } from 'react-redux';
 import Categories from './componets/categories';
 import Books from './componets/books';
+import Header from './componets/Header';
 import './styles/App.css';
 import store from './redux/cofigureStore';
 
@@ -19,6 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
+        <Header />
         <Provider store={store}>
           <Switch>
             <Route path="/categories">

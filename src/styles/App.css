@@ -6,3 +6,8 @@ body {
 .book {
   border: black solid;
 }
+
+.active-link {
+  color: orangered;
+  text-decoration: underline;
+}

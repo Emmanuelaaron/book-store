@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import AddBook from './addForm';
+import BookItem from './bookItem';
 // import { loadBooks } from '../redux/books/books';
 
 const Books = () => {
@@ -9,16 +10,21 @@ const Books = () => {
   // const loadBooksBound = bindActionCreators(loadBooks, dispatch)
   return (
     <>
+
       <h1>My Books</h1>
 
-      <ul>
+      <div>
         {books.map((book) => (
-          <li key={book.id}>
-            {book.title}
-
-          </li>
+          <BookItem
+            key={book.id}
+            title={book.title}
+            author={book.author}
+            genre={book.genre}
+            id={book.id}
+          />
         ))}
-      </ul>
+      </div>
+
       <AddBook />
     </>
   );

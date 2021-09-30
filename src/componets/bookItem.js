@@ -9,22 +9,20 @@ const BookItem = (props) => {
   const dispatch = useDispatch();
   const removeBookAction = bindActionCreators(removeBook, dispatch);
   const {
-    genre, title, author, id,
+    title, category, id,
   } = props;
   return (
     <div className="book">
-      <h4>{genre}</h4>
+      <h4>{category}</h4>
       <h1>{title}</h1>
-      <h4>{author}</h4>
-      <button type="button" onClick={() => removeBookAction(id)}>Delete</button>
+      <button type="button" onClick={() => removeBookAction(id)}>delete</button>
     </div>
   );
 };
 
 BookItem.propTypes = {
-  genre: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 

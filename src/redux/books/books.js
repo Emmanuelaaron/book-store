@@ -1,32 +1,46 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const LOAD_BOOKS = 'bookStore/books/LOAD_BOOKS';
 
-const initialState = [];
+const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/qfiFIDOzvo3tq0dSOKvi/books/';
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+export const addBook = (book) => async (dispatch) => {
+  dispatch({ type: ADD_BOOK });
+  await fetch(API_URL, {
+    method: 'POST',
+    body: new URLSearchParams({
+      item_id: uuidv4(),
+      title: book.title,
+      category: book.category,
+    }),
+  });
+  const response = await fetch(API_URL);
+  const state = await response.json();
+  dispatch({ type: LOAD_BOOKS, state });
+};
 
-export const removeBook = (bookId) => ({
-  type: REMOVE_BOOK,
-  bookId,
-});
+export const removeBook = (bookId) => async (dispatch) => {
+  dispatch({ type: REMOVE_BOOK });
+  await fetch(`${API_URL}${bookId}`, {
+    method: 'DELETE',
+  });
+  const response = await fetch(API_URL);
+  const state = await response.json();
+  dispatch({ type: LOAD_BOOKS, state });
+};
 
-export const loadBooks = () => ({
-  type: LOAD_BOOKS,
-});
+export const loadBooks = () => async (dispatch) => {
+  const response = await fetch(API_URL);
+  const state = await response.json();
+  dispatch({ type: LOAD_BOOKS, state });
+};
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return [...state, action.payload];
-
     case LOAD_BOOKS:
-      return [...state];
-    case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.bookId);
+      return action.state;
     default:
       return state;
   }

@@ -23,7 +23,6 @@ export const addBook = (book) => async (dispatch) => {
 
 export const removeBook = (bookId) => async (dispatch) => {
   dispatch({ type: REMOVE_BOOK });
-  console.log(`${API_URL}${bookId}`)
   await fetch(`${API_URL}${bookId}`, {
     method: 'DELETE',
   });

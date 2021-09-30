@@ -1,27 +1,35 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import AddBook from './addForm';
 import BookItem from './bookItem';
-// import { loadBooks } from '../redux/books/books';
+import { loadBooks } from '../redux/books/books';
 
 const Books = () => {
+  const dispatch = useDispatch();
+  const loadBooksBound = bindActionCreators(loadBooks, dispatch);
   const books = useSelector((state) => state.booksReducer);
-  // const loadBooksBound = bindActionCreators(loadBooks, dispatch)
+
+  useEffect(() => {
+    loadBooksBound();
+    return null;
+  }, []);
+
   return (
     <>
 
       <h1>My Books</h1>
 
       <div>
-        {books.map((book) => (
+        {Object.keys(books).map((id) => (
+
           <BookItem
-            key={book.id}
-            title={book.title}
-            author={book.author}
-            genre={book.genre}
-            id={book.id}
+            key={id}
+            title={books[id][0].title}
+            category={books[id][0].category}
+            id={id}
           />
+
         ))}
       </div>
 

@@ -1,0 +1,43 @@
+.active-link {
+  color: black;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.HeaderLeft {
+  display: flex;
+  align-items: center;
+}
+
+.bookStoreHeading {
+  color: rgb(64, 152, 224);
+}
+
+li {
+  padding: 14px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: black;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(141, 140, 140);
+}
+
+.headerRight {
+  border: rgb(141, 140, 140) solid 1px;
+  border-radius: 50%;
+  color: rgb(64, 152, 224);
+  padding: 5px;
+}

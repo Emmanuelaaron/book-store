@@ -30,6 +30,11 @@
   color: rgb(64, 152, 224);
 }
 
+.removeBookButton {
+    border-left: 1px solid rgb(141, 140, 140);
+    border-right: 1px solid rgb(141, 140, 140);
+}
+
 .bookContainer {
   display: flex;
   flex-direction: column;

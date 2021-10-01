@@ -17,7 +17,7 @@ const BookItem = (props) => {
         <p className="categoryP">{category}</p>
         <p className="titleP"><strong>{title}</strong></p>
         <button type="button" className="bookButton">Comments</button>
-        <button type="button" onClick={() => removeBookAction(id)} className="bookButton">Remove</button>
+        <button type="button" onClick={() => removeBookAction(id)} className="bookButton removeBookButton">Remove</button>
         <button type="button" className="bookButton">Edit</button>
       </div>
       <div className="bookLeft">

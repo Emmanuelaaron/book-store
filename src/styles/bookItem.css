@@ -1,0 +1,110 @@
+.book {
+  border: rgb(160, 158, 158) 1px solid;
+  background-color: white;
+  margin-bottom: 19px;
+  width: 90%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+}
+
+.titleP {
+  color: black;
+  font-size: large;
+  margin-top: -12px;
+  margin-bottom: 22px;
+}
+
+.categoryP {
+  color: rgb(141, 140, 140);
+}
+
+.bookButton {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: rgb(64, 152, 224);
+}
+
+.removeBookButton {
+  border-left: 1px solid rgb(141, 140, 140);
+  border-right: 1px solid rgb(141, 140, 140);
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pieChart {
+  border: solid rgb(64, 152, 224) 4px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+  border-left-color: rgb(141, 140, 140);
+  border-top-color: rgb(141, 140, 140);
+}
+
+.stats p,
+.chapterDetails p {
+  margin: 0;
+  padding: 2px;
+}
+
+.stats {
+  margin-left: 10px;
+}
+
+.percentage {
+  display: flex;
+}
+
+.completed {
+  font-size: 12px;
+  color: rgb(141, 140, 140);
+}
+
+.chapterDetails p {
+  font-size: 12px;
+}
+
+.currentChapter {
+  color: rgb(141, 140, 140);
+}
+
+.bookLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 31%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.updateButton {
+  background-color: rgb(64, 152, 224);
+  border: none;
+  padding: 10px;
+  font-size: 11px;
+  color: white;
+}
+
+.AddNewForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newBook {
+  width: 94%;
+  font-size: 12px;
+  color: rgb(141, 140, 140);
+  border-top: 1px rgb(141, 140, 140) solid;
+  padding-top: 20px;
+}

@@ -1,13 +1,6 @@
 
 body {
-  background-color: aliceblue;
-}
-
-.book {
-  border: black solid;
-}
-
-.active-link {
-  color: orangered;
-  text-decoration: underline;
+  background-color: rgb(239, 239, 240);
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -18,9 +18,7 @@ const Books = () => {
   return (
     <>
 
-      <h1>My Books</h1>
-
-      <div>
+      <div className="bookContainer">
         {Object.keys(books).map((id) => (
 
           <BookItem
@@ -33,7 +31,10 @@ const Books = () => {
         ))}
       </div>
 
-      <AddBook />
+      <div className="AddNewForm">
+        <h1 className="newBook">ADD NEW BOOK</h1>
+        <AddBook />
+      </div>
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addBook } from '../redux/books/books';
+import '../styles/addForm.css';
 
 const AddBook = () => {
   const dispatch = useDispatch();
@@ -31,10 +32,10 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={submitBookToStore}>
-      <input type="text" placeholder="Title" onChange={changeTitle} value={title} />
+    <form onSubmit={submitBookToStore} className="form">
+      <input type="text" placeholder="Book Title" onChange={changeTitle} value={title} className="bookTitle" />
       <input type="text" placeholder="Category" onChange={changeCategory} value={category} />
-      <button type="submit">Add</button>
+      <button type="submit" className="addBtn">ADD BOOK</button>
     </form>
   );
 };

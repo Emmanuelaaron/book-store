@@ -33,7 +33,7 @@ const AddBook = () => {
 
   return (
     <form onSubmit={submitBookToStore} className="form">
-      <input type="text" placeholder="Book Title" onChange={changeTitle} value={title} />
+      <input type="text" placeholder="Book Title" onChange={changeTitle} value={title} className="bookTitle" />
       <input type="text" placeholder="Category" onChange={changeCategory} value={category} />
       <button type="submit" className="addBtn">ADD BOOK</button>
     </form>

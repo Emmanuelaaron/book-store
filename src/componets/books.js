@@ -31,7 +31,10 @@ const Books = () => {
         ))}
       </div>
 
-      <AddBook />
+      <div className="AddNewForm">
+        <h1 className="newBook">ADD NEW BOOK</h1>
+        <AddBook />
+      </div>
     </>
   );
 };

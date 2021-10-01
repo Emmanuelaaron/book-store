@@ -1,0 +1,15 @@
+.form {
+  width: 94%;
+}
+
+input {
+  width: 40%;
+}
+
+.addBtn {
+  width: 10%;
+  padding: 4px;
+  background-color: rgb(64, 152, 224);
+  border: none;
+  color: white;
+}

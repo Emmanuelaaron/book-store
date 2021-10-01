@@ -1,8 +1,6 @@
 
 body {
   background-color: aliceblue;
+  margin: 0;
 }
 
-.book {
-  border: black solid;
-}

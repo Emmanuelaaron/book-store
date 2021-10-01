@@ -14,7 +14,7 @@ ul {
 }
 
 .bookStoreHeading {
-  color: rgb(64, 152, 224);
+  color: rgb(87, 144, 190);
 }
 
 li {
@@ -25,9 +25,11 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: black;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px rgb(160, 158, 158) solid;
+  margin-bottom: 20px;
+  background-color: white;
 }
 
 a {

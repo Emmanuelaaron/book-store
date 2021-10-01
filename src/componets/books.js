@@ -18,9 +18,7 @@ const Books = () => {
   return (
     <>
 
-      <h1>My Books</h1>
-
-      <div>
+      <div className="bookContainer">
         {Object.keys(books).map((id) => (
 
           <BookItem
